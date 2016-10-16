@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>practice javascript</title>
+		<style>
+	      div {
+	        background-color: red;
+	        height: 100px;
+	        width: 25%;
+	        float: left;
+	      }
+	    </style>
+	</head>
+	<body>
+		<script type="text/javascript">
+    for(var i=0; i<16; i++){
+      var myDiv = document.createElement('div');
+      document.body.appendChild(myDiv);
+    }
+      function Random(number){
+        return Math.floor(Math.random()*number);
+      }
+
+      function bgChange() {
+        var c = 'rgb(' + Random(255) +',' + Random(255) +',' + Random(255) +') ';
+        return c;
+      }
+
+      var divs = document.querySelectorAll('div');
+
+      for(var i=0; i<divs.length; i++){
+        divs[i].onclick = function(e) {
+        e.target.style.backgroundColor = bgChange();  
+        }
+      } 
+		</script>
+	</body>
+</html>
